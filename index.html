@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abigail — UGC Creator</title>
+<meta name="description" content="Abigail Quiña, UGC Creator en Buenos Aires. Contenido auténtico para marcas de moda, belleza, hogar, gastronomía y lifestyle.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abigail — UGC Creator">
+<meta property="og:description" content="Contenido auténtico que conecta: moda, belleza, hogar, gastronomía y lifestyle. Buenos Aires, Argentina.">
+<meta property="og:image" content="https://matiaszacagnino-personal.github.io/abby-portfolio/assets/img/hero-paris.jpg">
+<meta property="og:url" content="https://matiaszacagnino-personal.github.io/abby-portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%238B5E3C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23FBF6F1' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abigail Quiña",
+  "jobTitle": "UGC Creator",
+  "email": "abiqui.content@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF6F1;
+    --cream-deep: #F5EDE5;
+    --terra: #8B5E3C;
+    --terra-dark: #6B4226;
+    --ink: #4A4441;
+    --white: #FFFFFF;
+    --shadow: 0 20px 60px rgba(107, 66, 38, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('assets/img/silk-texture.jpg') center/cover no-repeat;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+  }
+  main, nav, footer { position: relative; z-index: 1; }
+
+  h1, h2, h3, .display {
+    font-family: 'Italiana', serif;
+    font-weight: 400;
+    color: var(--terra);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .section { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+  .section-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .section-rule {
+    width: 220px; height: 1px;
+    background: var(--terra);
+    margin: 0 auto 64px;
+    opacity: 0.6;
+  }
+
+  /* ───── Nav ───── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    z-index: 100;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  nav.scrolled {
+    background: rgba(251, 246, 241, 0.92);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 rgba(139, 94, 60, 0.12);
+  }
+  .nav-brand {
+    font-family: 'Italiana', serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.22em;
+    color: var(--terra);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--terra); }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+  .nav-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: var(--terra); margin: 5px 0;
+    transition: 0.3s;
+  }
+  @media (max-width: 820px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: rgba(251, 246, 241, 0.98);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      box-shadow: 0 12px 30px rgba(107,66,38,0.12);
+    }
+    .nav-links.open { max-height: 420px; }
+    .nav-links li { text-align: center; }
+    .nav-links a { display: block; padding: 15px; }
+  }
+
+  /* ───── Hero ───── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 24px 60px;
+  }
+  .hero-name {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .hero-role {
+    font-family: 'Italiana', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    letter-spacing: 0.35em;
+    color: var(--terra);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .hero-contact { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
+  .hero-contact a, .hero-contact span {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink); text-decoration: none;
+    font-size: 1.05rem;
+  }
+  .hero-contact a:hover { color: var(--terra); }
+  .icon {
+    width: 34px; height: 34px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--terra);
+    border-radius: 50%;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .icon svg { width: 16px; height: 16px; fill: currentColor; }
+  .hero-social { display: flex; gap: 16px; }
+  .hero-social a {
+    width: 46px; height: 46px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--terra);
+    border-radius: 12px;
+    color: var(--white);
+    transition: transform 0.2s, background 0.2s;
+  }
+  .hero-social a:hover { transform: translateY(-3px); background: var(--terra-dark); }
+  .hero-social svg { width: 22px; height: 22px; fill: currentColor; }
+  .hero-photo {
+    width: 100%;
+    max-height: 78vh;
+    object-fit: cover;
+    border-radius: 58% 42% 44% 56% / 40% 44% 56% 60%;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
+    .hero-contact a, .hero-contact span { justify-content: center; }
+    .hero-social { justify-content: center; }
+    .hero-photo { max-height: 55vh; order: -1; }
+  }
+
+  /* ───── Sobre mí ───── */
+  .about {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .about h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin-bottom: 20px; }
+  .about-block + .about-block { margin-top: 48px; }
+  .about p { font-size: 1.05rem; max-width: 56ch; }
+  .about-photo {
+    width: 100%;
+    border-radius: 42% 58% 56% 44% / 55% 42% 58% 45%;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 820px) {
+    .about { grid-template-columns: 1fr; }
+    .about-photo { max-width: 420px; margin: 0 auto; }
+  }
+
+  /* ───── Fotos ───── */
+  .filter-bar {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 12px; margin-bottom: 48px;
+  }
+  .filter-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border: 1px solid var(--terra);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--terra);
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  .filter-btn:hover, .filter-btn.active { background: var(--terra); color: var(--white); }
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .photo-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    box-shadow: 0 8px 28px rgba(107, 66, 38, 0.10);
+  }
+  .photo-card.hidden { display: none; }
+  .photo-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .photo-card:hover img { transform: scale(1.05); }
+  .photo-card figcaption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 32px 16px 14px;
+    background: linear-gradient(transparent, rgba(60, 35, 15, 0.55));
+    color: var(--white);
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* ───── Videos ───── */
+  .niche { margin-bottom: 72px; }
+  .niche:last-child { margin-bottom: 0; }
+  .niche h3 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .phones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 36px;
+  }
+  .phone {
+    width: 220px;
+    text-align: center;
+  }
+  .phone-frame {
+    position: relative;
+    border: 9px solid var(--terra);
+    border-radius: 34px;
+    overflow: hidden;
+    aspect-ratio: 9 / 17.5;
+    background: #1a1512;
+    box-shadow: var(--shadow);
+  }
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 56px; height: 7px;
+    background: var(--terra);
+    border-radius: 999px;
+    z-index: 3;
+  }
+  .phone-frame video, .phone-frame img.poster {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .play-btn {
+    position: absolute;
+    inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(40, 24, 10, 0.18);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.25s;
+    z-index: 2;
+  }
+  .play-btn::after {
+    content: '';
+    width: 56px; height: 56px;
+    background: rgba(251, 246, 241, 0.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238B5E3C'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/26px no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+  .phone.playing .play-btn { opacity: 0; pointer-events: none; }
+  .phone-label {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+  }
+
+  /* ───── Servicios ───── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 28px;
+    text-align: center;
+    box-shadow: 0 10px 34px rgba(107, 66, 38, 0.08);
+    transition: transform 0.25s;
+  }
+  .service-card:hover { transform: translateY(-6px); }
+  .service-card .glyph {
+    font-family: 'Italiana', serif;
+    font-size: 2.4rem;
+    color: var(--terra);
+    display: block;
+    margin-bottom: 14px;
+    letter-spacing: 0;
+  }
+  .service-card h3 {
+    font-size: 1.15rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+  }
+  .service-card p { font-size: 0.95rem; }
+
+  /* ───── Precios ───── */
+  #precios { background: var(--cream-deep); }
+  #precios .inner { max-width: 1200px; margin: 0 auto; padding: 100px 24px; }
+  .price-group { margin-bottom: 56px; }
+  .price-group:last-of-type { margin-bottom: 24px; }
+  .price-group h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .price-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .price-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 36px 24px;
+    text-align: center;
+    box-shadow: 0 10px 34px rgba(107, 66, 38, 0.08);
+  }
+  .price-card .qty {
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .price-card .amount {
+    font-family: 'Italiana', serif;
+    font-size: 2.6rem;
+    color: var(--terra);
+  }
+  .price-card .per {
+    font-size: 0.85rem;
+    color: var(--ink);
+    opacity: 0.75;
+  }
+  .price-notes {
+    text-align: center;
+    font-size: 0.95rem;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .price-notes em { color: var(--terra); }
+
+  /* ───── Contacto ───── */
+  .contact {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .contact-photo {
+    width: 100%;
+    border-radius: 56% 44% 42% 58% / 44% 56% 44% 56%;
+    box-shadow: var(--shadow);
+  }
+  .contact h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.15; margin-bottom: 20px; }
+  .contact p { font-size: 1.1rem; margin-bottom: 32px; max-width: 44ch; }
+  .contact-actions { display: flex; flex-direction: column; gap: 16px; max-width: 380px; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    padding: 15px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: 0.25s;
+  }
+  .btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .btn-primary { background: var(--terra); color: var(--white); }
+  .btn-primary:hover { background: var(--terra-dark); transform: translateY(-2px); }
+  .btn-outline { border: 1px solid var(--terra); color: var(--terra); }
+  .btn-outline:hover { background: var(--terra); color: var(--white); }
+  @media (max-width: 820px) {
+    .contact { grid-template-columns: 1fr; text-align: center; }
+    .contact-photo { max-width: 380px; margin: 0 auto; }
+    .contact p { margin-left: auto; margin-right: auto; }
+    .contact-actions { margin: 0 auto; }
+  }
+
+  footer {
+    text-align: center;
+    padding: 36px 24px;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terra);
+    border-top: 1px solid rgba(139, 94, 60, 0.15);
+  }
+
+  /* ───── Reveal animation ───── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* Stagger: los hijos de grillas aparecen en cascada */
+  .stagger > * { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; transition-delay: var(--d, 0s); }
+  .stagger.visible > * { opacity: 1; transform: none; }
+
+  /* ───── Hero entrance ───── */
+  .hero > div > * { opacity: 0; transform: translateY(22px); animation: heroIn 0.9s ease forwards; }
+  .hero .hero-name { animation-delay: 0.1s; }
+  .hero .hero-role { animation-delay: 0.25s; }
+  .hero .hero-usp { animation-delay: 0.4s; }
+  .hero .hero-contact { animation-delay: 0.55s; }
+  .hero .hero-social { animation-delay: 0.7s; }
+  .hero-photo { opacity: 0; animation: heroIn 1.1s ease 0.2s forwards; will-change: transform; }
+  @keyframes heroIn { to { opacity: 1; transform: none; } }
+  .hero-usp {
+    font-size: 1.05rem;
+    max-width: 42ch;
+    margin-bottom: 32px;
+  }
+  .hero-usp em { font-style: normal; color: var(--terra); }
+  @media (max-width: 820px) { .hero-usp { margin-left: auto; margin-right: auto; } }
+
+  /* ───── Nav CTA ───── */
+  .nav-links .nav-cta a {
+    border: 1px solid var(--terra);
+    border-radius: 999px;
+    padding: 8px 20px;
+    color: var(--terra);
+  }
+  .nav-links .nav-cta a:hover { background: var(--terra); color: var(--white); }
+  .nav-links a.active { color: var(--terra); }
+  @media (max-width: 820px) { .nav-links .nav-cta a { border: none; padding: 15px; } }
+
+  /* ───── Marquee editorial ───── */
+  .marquee {
+    overflow: hidden;
+    border-top: 1px solid rgba(139, 94, 60, 0.25);
+    border-bottom: 1px solid rgba(139, 94, 60, 0.25);
+    padding: 18px 0;
+    white-space: nowrap;
+  }
+  .marquee-track {
+    display: inline-flex;
+    animation: marquee 28s linear infinite;
+  }
+  .marquee span {
+    font-family: 'Italiana', serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--terra);
+    padding: 0 28px;
+  }
+  .marquee span::after { content: '✦'; margin-left: 56px; font-size: 0.9rem; vertical-align: 2px; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  /* ───── Proceso ───── */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    counter-reset: paso;
+  }
+  .step {
+    position: relative;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 44px 28px 36px;
+    box-shadow: 0 10px 34px rgba(107, 66, 38, 0.08);
+  }
+  .step::before {
+    counter-increment: paso;
+    content: '0' counter(paso);
+    font-family: 'Italiana', serif;
+    font-size: 3.2rem;
+    color: var(--terra);
+    opacity: 0.28;
+    position: absolute;
+    top: 12px; right: 20px;
+    line-height: 1;
+  }
+  .step h3 { font-size: 1.15rem; letter-spacing: 0.14em; margin-bottom: 12px; }
+  .step p { font-size: 0.95rem; }
+
+  /* ───── Lightbox ───── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(30, 20, 12, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .lightbox.open { opacity: 1; pointer-events: auto; }
+  .lightbox img {
+    max-width: min(88vw, 900px);
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  }
+  .lb-caption {
+    position: absolute;
+    bottom: 28px; left: 0; right: 0;
+    text-align: center;
+    color: var(--cream);
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .lb-btn {
+    position: absolute;
+    background: rgba(251, 246, 241, 0.12);
+    border: 1px solid rgba(251, 246, 241, 0.35);
+    color: var(--cream);
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .lb-btn:hover { background: rgba(251, 246, 241, 0.28); }
+  .lb-close { top: 24px; right: 24px; }
+  .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+  @media (max-width: 600px) {
+    .lb-prev { left: 8px; } .lb-next { right: 8px; }
+    .lb-btn { width: 42px; height: 42px; }
+  }
+  .photo-card { cursor: zoom-in; }
+
+  /* ───── Back to top ───── */
+  .to-top {
+    position: fixed;
+    bottom: 26px; right: 26px;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: var(--terra);
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 10px 26px rgba(107, 66, 38, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: 0.3s;
+    z-index: 90;
+  }
+  .to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+  .to-top:hover { background: var(--terra-dark); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .stagger > * { opacity: 1; transform: none; transition: none; }
+    .hero > div > *, .hero-photo { opacity: 1; transform: none; animation: none; }
+    .marquee-track { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-brand" href="#inicio">Abigail</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#fotos">Fotos</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li class="nav-cta"><a href="#contacto">Trabajemos juntos</a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- ───── Hero ───── -->
+  <section class="hero" id="inicio">
+    <div>
+      <h1 class="hero-name">Abigail</h1>
+      <p class="hero-role">UGC Creator</p>
+      <p class="hero-usp">Contenido <em>auténtico</em> que conecta con personas reales: moda, belleza, hogar, gastronomía y lifestyle.</p>
+      <div class="hero-contact">
+        <a href="mailto:abiqui.content@gmail.com">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg></span>
+          abiqui.content@gmail.com
+        </a>
+        <span>
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+          Buenos Aires, Argentina
+        </span>
+      </div>
+      <div class="hero-social">
+        <!-- TODO: completar handles reales de Abby -->
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.48 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+      </div>
+    </div>
+    <img class="hero-photo" src="assets/img/hero-paris.jpg" alt="Abigail en París" id="heroPhoto">
+  </section>
+
+  <!-- ───── Marquee editorial ───── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Moda</span><span>Belleza</span><span>Home</span><span>Lifestyle</span><span>Gastronomía</span><span>Joyería</span>
+      <span>Moda</span><span>Belleza</span><span>Home</span><span>Lifestyle</span><span>Gastronomía</span><span>Joyería</span>
+    </div>
+  </div>
+
+  <!-- ───── Sobre mí ───── -->
+  <section class="section about reveal" id="sobre-mi">
+    <div>
+      <div class="about-block">
+        <h2>¿Por qué yo?</h2>
+        <p>Puedo crear contenido para productos, servicios y experiencias reales. Desde perfumes y moda hasta gastronomía, hogar, bienestar y deporte, desarrollo contenido auténtico que conecta con las personas de forma natural y genera confianza en las marcas.</p>
+        <p style="margin-top: 14px;">Como creadora de contenido y fundadora de un equipo de fútbol femenino, entiendo la importancia de construir comunidades reales, generar engagement genuino y crear contenido que conecte con la audiencia.</p>
+      </div>
+      <div class="about-block">
+        <h2>¿Por qué UGC?</h2>
+        <p>Los clientes prefieren ver a personas reales compartiendo sus experiencias y opiniones sobre los productos, en lugar de campañas publicitarias cuidadosamente seleccionadas.</p>
+      </div>
+    </div>
+    <img class="about-photo" src="assets/img/about-louvre.jpg" alt="Abigail en el Louvre">
+  </section>
+
+  <!-- ───── Fotos ───── -->
+  <section class="section reveal" id="fotos">
+    <h2 class="section-title">Fotos</h2>
+    <div class="section-rule"></div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+      <button class="filter-btn" data-filter="gastro">Gastronomía</button>
+      <button class="filter-btn" data-filter="belleza">Belleza</button>
+      <button class="filter-btn" data-filter="moda">Moda</button>
+    </div>
+    <div class="photo-grid stagger" id="photoGrid">
+      <figure class="photo-card" data-cat="lifestyle"><img src="assets/img/photo-wine-1.jpg" alt="Degustación de vinos" loading="lazy"><figcaption>Lifestyle</figcaption></figure>
+      <figure class="photo-card" data-cat="gastro"><img src="assets/img/photo-wine-2.jpg" alt="Copas de vino" loading="lazy"><figcaption>Gastronomía</figcaption></figure>
+      <figure class="photo-card" data-cat="lifestyle"><img src="assets/img/photo-wine-3.jpg" alt="Viñedo" loading="lazy"><figcaption>Lifestyle</figcaption></figure>
+      <figure class="photo-card" data-cat="gastro"><img src="assets/img/photo-resto-1.jpg" alt="Restaurante" loading="lazy"><figcaption>Gastronomía</figcaption></figure>
+      <figure class="photo-card" data-cat="gastro"><img src="assets/img/photo-resto-2.jpg" alt="Sushi" loading="lazy"><figcaption>Gastronomía</figcaption></figure>
+      <figure class="photo-card" data-cat="gastro"><img src="assets/img/photo-resto-3.jpg" alt="Ambiente de restaurante" loading="lazy"><figcaption>Gastronomía</figcaption></figure>
+      <figure class="photo-card" data-cat="belleza"><img src="assets/img/photo-beauty-1.jpg" alt="Productos de belleza" loading="lazy"><figcaption>Belleza</figcaption></figure>
+      <figure class="photo-card" data-cat="belleza"><img src="assets/img/photo-beauty-2.jpg" alt="Perfume" loading="lazy"><figcaption>Belleza</figcaption></figure>
+      <figure class="photo-card" data-cat="belleza"><img src="assets/img/photo-beauty-3.jpg" alt="Skincare" loading="lazy"><figcaption>Belleza</figcaption></figure>
+      <figure class="photo-card" data-cat="moda"><img src="assets/img/photo-fashion-1.jpg" alt="Moda" loading="lazy"><figcaption>Moda</figcaption></figure>
+      <figure class="photo-card" data-cat="belleza"><img src="assets/img/photo-fashion-2.jpg" alt="Esmalte" loading="lazy"><figcaption>Belleza</figcaption></figure>
+      <figure class="photo-card" data-cat="moda"><img src="assets/img/photo-fashion-3.jpg" alt="Outfit" loading="lazy"><figcaption>Moda</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ───── Videos ───── -->
+  <section class="section reveal" id="videos">
+    <h2 class="section-title">Videos</h2>
+    <div class="section-rule"></div>
+
+    <div class="niche">
+      <h3>Moda</h3>
+      <div class="phones">
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/moda-unboxing.jpg" src="assets/videos/moda-unboxing.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Unboxing y try on</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/moda-camara.jpg" src="assets/videos/moda-camara.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Hablando a cámara</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/moda-outfit.jpg" src="assets/videos/moda-outfit.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Outfit of the day</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/moda-aesthetic.jpg" src="assets/videos/moda-aesthetic.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Aesthetic</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="niche">
+      <h3>Belleza</h3>
+      <div class="phones">
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/belleza-camara.jpg" src="assets/videos/belleza-camara.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Hablando a cámara</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/belleza-resena.jpg" src="assets/videos/belleza-resena.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Reseña</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/belleza-aesthetic.jpg" src="assets/videos/belleza-aesthetic.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Aesthetic</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/belleza-voz.jpg" src="assets/videos/belleza-voz.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Voz en off</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="niche">
+      <h3>Home</h3>
+      <div class="phones">
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/home-camara.jpg" src="assets/videos/home-camara.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Hablando a cámara</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/home-voz.jpg" src="assets/videos/home-voz.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Voz en off</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/home-pijama.jpg" src="assets/videos/home-pijama.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Aesthetic</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/home-manta.jpg" src="assets/videos/home-manta.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Lifestyle</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="niche">
+      <h3>Más nichos</h3>
+      <div class="phones">
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/jewelry-1.jpg" src="assets/videos/jewelry-1.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Joyería</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/fashion-skincare.jpg" src="assets/videos/fashion-skincare.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Skincare</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/lifestyle-honey.jpg" src="assets/videos/lifestyle-honey.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Lifestyle</p>
+        </div>
+        <div class="phone">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/lifestyle-colchon.jpg" src="assets/videos/lifestyle-colchon.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Home</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Servicios ───── -->
+  <section class="section reveal" id="servicios">
+    <h2 class="section-title">Servicios</h2>
+    <div class="section-rule"></div>
+    <div class="services-grid stagger">
+      <div class="service-card">
+        <span class="glyph">I</span>
+        <h3>Videos UGC orgánicos</h3>
+        <p>Contenido mensual para tus redes: unboxings, try-on, reseñas, hablando a cámara y voz en off, con estética cuidada y guion propio.</p>
+      </div>
+      <div class="service-card">
+        <span class="glyph">II</span>
+        <h3>Videos para Paid Ads</h3>
+        <p>Piezas de 15 a 30 segundos pensadas para pauta: hook, demostración y llamado a la acción, listas para Meta y TikTok Ads.</p>
+      </div>
+      <div class="service-card">
+        <span class="glyph">III</span>
+        <h3>Fotos UGC</h3>
+        <p>Fotografía de producto y lifestyle con luz natural, para feed, web y catálogo. Estilo auténtico, no de estudio.</p>
+      </div>
+      <div class="service-card">
+        <span class="glyph">IV</span>
+        <h3>Experiencias y locales</h3>
+        <p>Cobertura de restaurantes, hoteles, vinotecas y experiencias: contenido en el lugar que transmite lo que se siente estar ahí.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Cómo trabajamos ───── -->
+  <section class="section reveal" id="proceso">
+    <h2 class="section-title">Cómo trabajamos</h2>
+    <div class="section-rule"></div>
+    <div class="steps stagger">
+      <div class="step">
+        <h3>Brief</h3>
+        <p>Me contás sobre tu marca, tu producto y qué querés lograr. Definimos juntos formato, tono y referencias.</p>
+      </div>
+      <div class="step">
+        <h3>Creación</h3>
+        <p>Escribo el guion, filmo y edito el contenido con estética cuidada y luz natural, pensado para tu audiencia.</p>
+      </div>
+      <div class="step">
+        <h3>Entrega</h3>
+        <p>Recibís el contenido listo para publicar en tus redes o usar en pauta, con una ronda de ajustes incluida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Precios ───── -->
+  <section id="precios" class="reveal">
+    <div class="inner">
+      <h2 class="section-title">Precios</h2>
+      <div class="section-rule"></div>
+      <div class="price-group">
+        <h3>Contenido orgánico</h3>
+        <div class="price-cards">
+          <div class="price-card">
+            <p class="qty">8 videos / mes</p>
+            <p class="amount">$900</p>
+            <p class="per">USD por mes</p>
+          </div>
+          <div class="price-card">
+            <p class="qty">10 fotos / mes</p>
+            <p class="amount">$400</p>
+            <p class="per">USD por mes</p>
+          </div>
+          <div class="price-card">
+            <p class="qty">13 videos / mes</p>
+            <p class="amount">$1800</p>
+            <p class="per">USD por mes</p>
+          </div>
+        </div>
+      </div>
+      <div class="price-group">
+        <h3>Paid Ad Content</h3>
+        <div class="price-cards">
+          <div class="price-card">
+            <p class="qty">1 video · 15-30 seg</p>
+            <p class="amount">$190</p>
+            <p class="per">USD</p>
+          </div>
+          <div class="price-card">
+            <p class="qty">3 videos · 15-30 seg</p>
+            <p class="amount">$420</p>
+            <p class="per">USD</p>
+          </div>
+          <div class="price-card">
+            <p class="qty">5 videos · 15-30 seg</p>
+            <p class="amount">$800</p>
+            <p class="per">USD</p>
+          </div>
+        </div>
+      </div>
+      <p class="price-notes">Archivos raw: <em>+20% del precio del video</em>.<br>Precios en dólares (USD). Hay paquetes personalizables — escribime para más info.</p>
+    </div>
+  </section>
+
+  <!-- ───── Contacto ───── -->
+  <section class="section contact reveal" id="contacto">
+    <img class="contact-photo" src="assets/img/contact.jpg" alt="Abigail">
+    <div>
+      <h2>Trabajemos juntos</h2>
+      <p>Me encantaría ser parte del crecimiento de tu marca y crear contenido que conecte de verdad con tu audiencia.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:abiqui.content@gmail.com">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg>
+          abiqui.content@gmail.com
+        </a>
+        <a class="btn btn-outline" href="https://wa.me/5491132640482" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.51 14.94L2 22l5.2-1.49A9.9 9.9 0 1 0 12.04 2zm5.78 14.08c-.24.68-1.4 1.3-1.93 1.35-.52.05-1.01.24-3.4-.71-2.87-1.13-4.68-4.06-4.82-4.25-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07.99-2.35.26-.28.57-.35.76-.35s.38 0 .55.01c.18.01.41-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.29-.13.57.17.28.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.29 1.41.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.38-.23.64-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.35z"/></svg>
+          +54 9 11 3264-0482
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Abigail Quiña · UGC Creator · Buenos Aires</footer>
+
+<!-- ───── Lightbox ───── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente">›</button>
+  <p class="lb-caption" id="lbCaption"></p>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+<script>
+  // Nav: fondo al scrollear + menú mobile
+  const nav = document.getElementById('nav');
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), { passive: true });
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.addEventListener('click', e => { if (e.target.tagName === 'A') navLinks.classList.remove('open'); });
+
+  // Filtros de fotos
+  document.getElementById('filterBar').addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.photo-card').forEach(card => {
+      card.classList.toggle('hidden', f !== 'all' && card.dataset.cat !== f);
+    });
+  });
+
+  // Videos: play/pausa con overlay; pausa los demás al reproducir uno
+  document.querySelectorAll('.phone').forEach(phone => {
+    const video = phone.querySelector('video');
+    const btn = phone.querySelector('.play-btn');
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.phone video').forEach(v => { if (v !== video) { v.pause(); v.closest('.phone').classList.remove('playing'); } });
+      video.play().then(() => phone.classList.add('playing'))
+        .catch(() => { btn.style.opacity = '0.35'; btn.style.cursor = 'default'; });
+    });
+    video.addEventListener('click', () => { video.pause(); });
+    video.addEventListener('pause', () => phone.classList.remove('playing'));
+    video.addEventListener('ended', () => phone.classList.remove('playing'));
+  });
+
+  // Aparición al scrollear (secciones y grillas escalonadas)
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal, .stagger').forEach(el => io.observe(el));
+  document.querySelectorAll('.stagger').forEach(g => {
+    [...g.children].forEach((child, i) => child.style.setProperty('--d', (i * 0.07) + 's'));
+  });
+
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Parallax sutil de la foto del hero
+  const heroPhoto = document.getElementById('heroPhoto');
+  if (!reduceMotion && heroPhoto) {
+    addEventListener('scroll', () => {
+      const y = Math.min(scrollY, innerHeight);
+      heroPhoto.style.transform = 'translateY(' + (y * 0.12) + 'px)';
+    }, { passive: true });
+  }
+
+  // Link activo en la nav según sección visible
+  const sections = ['sobre-mi', 'fotos', 'videos', 'servicios', 'precios', 'contacto']
+    .map(id => document.getElementById(id));
+  const navAnchors = [...document.querySelectorAll('.nav-links a')];
+  const ioNav = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => s && ioNav.observe(s));
+
+  // Volver arriba
+  const toTop = document.getElementById('toTop');
+  addEventListener('scroll', () => toTop.classList.toggle('show', scrollY > 900), { passive: true });
+  toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+  // Lightbox de la galería
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  let lbItems = [], lbIndex = 0;
+
+  function lbVisibleCards() {
+    return [...document.querySelectorAll('.photo-card:not(.hidden)')];
+  }
+  function lbShow(i) {
+    lbItems = lbVisibleCards();
+    if (!lbItems.length) return;
+    lbIndex = (i + lbItems.length) % lbItems.length;
+    const img = lbItems[lbIndex].querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCaption.textContent = lbItems[lbIndex].querySelector('figcaption').textContent;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function lbClose() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('photoGrid').addEventListener('click', e => {
+    const card = e.target.closest('.photo-card');
+    if (card) lbShow(lbVisibleCards().indexOf(card));
+  });
+  document.getElementById('lbClose').addEventListener('click', lbClose);
+  document.getElementById('lbPrev').addEventListener('click', () => lbShow(lbIndex - 1));
+  document.getElementById('lbNext').addEventListener('click', () => lbShow(lbIndex + 1));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) lbClose(); });
+  addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+    if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+  });
+  let touchX = null;
+  lightbox.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) lbShow(lbIndex + (dx < 0 ? 1 : -1));
+    touchX = null;
+  }, { passive: true });
+</script>
+</body>
+</html>
