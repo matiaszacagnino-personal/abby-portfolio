@@ -1,6 +1,8 @@
 # Portfolio web de Abby — UGC Creator
 
-Versión web del portfolio de Canva de Abigail Quiña. Sitio estático (un solo `index.html` + assets), sin dependencias ni build: se abre con doble click o se sube a cualquier hosting estático.
+Versión web del portfolio de Canva de Abby (Abigail Quiña). Sitio estático (un solo `index.html` + assets), sin dependencias ni build: se abre con doble click o se sube a cualquier hosting estático.
+
+El portfolio mantiene la estética glamour (crema, serif Italiana, terracota) y tiene una **sección Tech & Apps** (`#tech`, después del marquee) que cambia de clima: fondo oscuro, Space Grotesk + IBM Plex Mono, acento ámbar. Vende el perfil developer de Abby (Baufest/Oracle, según su CV) como credibilidad para reviews de apps de fintech, delivery, fitness y gadgets. Los mockups de video de esa sección son placeholders "próximamente" hasta grabar los primeros spots tech.
 
 ## Qué mejora respecto del Canva
 

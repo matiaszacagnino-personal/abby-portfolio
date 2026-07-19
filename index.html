@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abigail — UGC Creator</title>
-<meta name="description" content="Abigail Quiña, UGC Creator en Buenos Aires. Contenido auténtico para marcas de moda, belleza, hogar, gastronomía y lifestyle.">
+<title>Abby — UGC Creator</title>
+<meta name="description" content="Abby (Abigail Quiña), UGC Creator en Buenos Aires. Contenido auténtico para marcas de moda, belleza, hogar, gastronomía, lifestyle y tech: reviews de apps con criterio de developer.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Abigail — UGC Creator">
-<meta property="og:description" content="Contenido auténtico que conecta: moda, belleza, hogar, gastronomía y lifestyle. Buenos Aires, Argentina.">
+<meta property="og:title" content="Abby — UGC Creator">
+<meta property="og:description" content="Contenido auténtico que conecta: moda, belleza, hogar, gastronomía, lifestyle y tech & apps. Buenos Aires, Argentina.">
 <meta property="og:image" content="https://matiaszacagnino-personal.github.io/abby-portfolio/assets/img/hero-paris.jpg">
 <meta property="og:url" content="https://matiaszacagnino-personal.github.io/abby-portfolio/">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Abigail Quiña",
+  "alternateName": "Abby",
   "jobTitle": "UGC Creator",
   "email": "abiqui.content@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" }
@@ -24,7 +25,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300&family=Space+Grotesk:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --cream: #FBF6F1;
@@ -521,6 +522,253 @@
   .marquee span::after { content: '✦'; margin-left: 56px; font-size: 0.9rem; vertical-align: 2px; }
   @keyframes marquee { to { transform: translateX(-50%); } }
 
+  /* ───── Sección Tech & Apps (modo dev de ABBY, dentro del mismo portfolio) ───── */
+  #tech {
+    --t-bg: #140F0A;
+    --t-panel: #1E1610;
+    --t-panel-2: #271D14;
+    --t-line: rgba(233, 229, 222, 0.12);
+    --t-text: #E9E5DE;
+    --t-muted: #A99C8F;
+    --t-accent: #E8965A;
+    --t-mint: #6EE7B7;
+    background: var(--t-bg);
+    color: var(--t-text);
+    border-top: 1px solid rgba(139, 94, 60, 0.25);
+    border-bottom: 1px solid rgba(139, 94, 60, 0.25);
+    background-image:
+      linear-gradient(rgba(233,229,222,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(233,229,222,0.03) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  #tech .inner { max-width: 1200px; margin: 0 auto; padding: 96px 24px; }
+  #tech h2, #tech h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    color: var(--t-text);
+  }
+  .t-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--t-mint);
+  }
+  #tech .tech-head { margin-bottom: 48px; }
+  #tech .tech-head .t-mono { display: block; margin-bottom: 14px; }
+  #tech .tech-head h2 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); margin-bottom: 12px; }
+  #tech .tech-head h2 em { font-style: normal; color: var(--t-accent); }
+  #tech .tech-head p { color: var(--t-muted); font-size: 1.05rem; max-width: 62ch; }
+
+  .tech-intro {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 44px;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+  .tech-intro h3 { font-size: 1.4rem; margin-bottom: 18px; }
+  .tech-intro h3 em { font-style: normal; color: var(--t-accent); }
+  .tech-creds { display: grid; gap: 16px; }
+  .tech-cred {
+    background: var(--t-panel);
+    border: 1px solid var(--t-line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    font-size: 0.93rem;
+    color: var(--t-muted);
+    line-height: 1.6;
+  }
+  .tech-cred strong { color: var(--t-text); font-weight: 500; }
+  .tech-cred .t-mono { display: block; margin-bottom: 6px; color: var(--t-accent); }
+
+  .terminal {
+    background: var(--t-panel);
+    border: 1px solid var(--t-line);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    max-width: 520px;
+    width: 100%;
+    justify-self: end;
+  }
+  .terminal-bar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 13px 16px;
+    background: var(--t-panel-2);
+    border-bottom: 1px solid var(--t-line);
+  }
+  .terminal-bar i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+  .terminal-bar i:nth-child(1) { background: #F97066; }
+  .terminal-bar i:nth-child(2) { background: #F5C64F; }
+  .terminal-bar i:nth-child(3) { background: #53C88B; }
+  .terminal-bar span {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--t-muted);
+  }
+  .terminal-body {
+    padding: 22px 20px 26px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.86rem;
+    line-height: 2.1;
+  }
+  #tech.visible .terminal-body p { opacity: 0; animation: lineIn 0.4s ease forwards; white-space: nowrap; }
+  #tech.visible .terminal-body p:nth-child(1) { animation-delay: 0.4s; }
+  #tech.visible .terminal-body p:nth-child(2) { animation-delay: 1.0s; }
+  #tech.visible .terminal-body p:nth-child(3) { animation-delay: 1.6s; }
+  #tech.visible .terminal-body p:nth-child(4) { animation-delay: 2.2s; }
+  #tech.visible .terminal-body p:nth-child(5) { animation-delay: 2.8s; }
+  @keyframes lineIn { to { opacity: 1; } }
+  .t-prompt { color: var(--t-mint); }
+  .t-ok { color: var(--t-mint); }
+  .t-accent-txt { color: var(--t-accent); }
+  .t-dim { color: var(--t-muted); }
+  .cursor {
+    display: inline-block;
+    width: 9px; height: 1.1em;
+    background: var(--t-accent);
+    vertical-align: text-bottom;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .tech-formats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 64px;
+  }
+  @media (max-width: 900px) {
+    .tech-formats { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  }
+  .format-card {
+    background: var(--t-panel);
+    border: 1px solid var(--t-line);
+    border-radius: 14px;
+    padding: 20px 18px;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .format-card:hover { transform: translateY(-4px); border-color: rgba(232, 150, 90, 0.45); }
+  .format-card .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--t-accent);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .format-card h3 { font-size: 0.98rem; margin-bottom: 6px; }
+  .format-card p { font-size: 0.85rem; color: var(--t-muted); }
+
+  .tech-phones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+  .tech-phone { width: 200px; text-align: center; }
+  .tech-phone .frame {
+    position: relative;
+    border: 8px solid #3B2E22;
+    border-radius: 32px;
+    overflow: hidden;
+    aspect-ratio: 9 / 17.5;
+    background: var(--t-panel-2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+  .tech-phone .frame::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 52px; height: 7px;
+    background: #3B2E22;
+    border-radius: 999px;
+    z-index: 3;
+  }
+  .tech-phone .screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px 16px;
+  }
+  .tech-phone .app-icon {
+    width: 54px; height: 54px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+  }
+  .tech-phone .vertical-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--t-text);
+    letter-spacing: 0.08em;
+  }
+  .tech-phone .skeleton { width: 100%; display: grid; gap: 7px; margin-top: 8px; }
+  .tech-phone .skeleton i {
+    display: block; height: 8px; border-radius: 4px;
+    background: rgba(233, 229, 222, 0.1);
+  }
+  .tech-phone .skeleton i:nth-child(2) { width: 74%; margin: 0 auto; }
+  .tech-phone .skeleton i:nth-child(3) { width: 52%; margin: 0 auto; }
+  .tech-phone .soon {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--t-muted);
+    border: 1px solid var(--t-line);
+    border-radius: 999px;
+    padding: 4px 11px;
+    margin-top: 5px;
+  }
+  .s-fintech .app-icon { background: rgba(110, 231, 183, 0.15); color: var(--t-mint); }
+  .s-delivery .app-icon { background: rgba(232, 150, 90, 0.16); color: var(--t-accent); }
+  .s-fitness .app-icon { background: rgba(125, 168, 252, 0.15); color: #7DA8FC; }
+  .s-deporte .app-icon { background: rgba(245, 198, 79, 0.14); color: #F5C64F; }
+  .tech-phone .label {
+    margin-top: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--t-muted);
+  }
+
+  .tech-cta { text-align: center; }
+  .tech-cta p { color: var(--t-muted); font-size: 1rem; margin-bottom: 22px; max-width: 58ch; margin-left: auto; margin-right: auto; }
+  .tech-cta p strong { color: var(--t-accent); font-weight: 500; }
+  .btn-tech {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    background: var(--t-accent);
+    color: var(--t-bg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: 0.25s;
+  }
+  .btn-tech:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+  @media (max-width: 900px) {
+    .tech-intro { grid-template-columns: 1fr; }
+    .terminal { justify-self: center; }
+    .terminal-body { font-size: 0.76rem; }
+  }
+
   /* ───── Proceso ───── */
   .steps {
     display: grid;
@@ -634,12 +882,13 @@
 <body>
 
 <nav id="nav">
-  <a class="nav-brand" href="#inicio">Abigail</a>
+  <a class="nav-brand" href="#inicio">Abby</a>
   <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navLinks">
     <li><a href="#sobre-mi">Sobre mí</a></li>
     <li><a href="#fotos">Fotos</a></li>
     <li><a href="#videos">Videos</a></li>
+    <li><a href="#tech">Tech &amp; Apps</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#precios">Precios</a></li>
     <li class="nav-cta"><a href="#contacto">Trabajemos juntos</a></li>
@@ -650,9 +899,9 @@
   <!-- ───── Hero ───── -->
   <section class="hero" id="inicio">
     <div>
-      <h1 class="hero-name">Abigail</h1>
+      <h1 class="hero-name">Abby</h1>
       <p class="hero-role">UGC Creator</p>
-      <p class="hero-usp">Contenido <em>auténtico</em> que conecta con personas reales: moda, belleza, hogar, gastronomía y lifestyle.</p>
+      <p class="hero-usp">Contenido <em>auténtico</em> que conecta con personas reales: moda, belleza, hogar, gastronomía, lifestyle y <em>tech &amp; apps</em>.</p>
       <div class="hero-contact">
         <a href="mailto:abiqui.content@gmail.com">
           <span class="icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg></span>
@@ -679,8 +928,8 @@
   <!-- ───── Marquee editorial ───── -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Moda</span><span>Belleza</span><span>Home</span><span>Lifestyle</span><span>Gastronomía</span><span>Joyería</span>
-      <span>Moda</span><span>Belleza</span><span>Home</span><span>Lifestyle</span><span>Gastronomía</span><span>Joyería</span>
+      <span>Moda</span><span>Belleza</span><span>Home</span><span>Lifestyle</span><span>Gastronomía</span><span>Joyería</span><span>Tech &amp; Apps</span>
+      <span>Moda</span><span>Belleza</span><span>Home</span><span>Lifestyle</span><span>Gastronomía</span><span>Joyería</span><span>Tech &amp; Apps</span>
     </div>
   </div>
 
@@ -869,6 +1118,133 @@
     </div>
   </section>
 
+
+  <!-- ───── Sección Tech & Apps ───── -->
+  <section class="reveal" id="tech">
+    <div class="inner">
+      <div class="tech-head">
+        <span class="t-mono">// abby.tech — ugc · tech &amp; apps</span>
+        <h2>¿Tu marca es una <em>app</em> o un producto tech?</h2>
+        <p>Acá cambio de modo: reviews de apps y gadgets con criterio real de developer. Contenido que suena a persona, no a publicidad.</p>
+      </div>
+
+      <div class="tech-intro">
+        <div>
+          <h3>Detrás de ABBY hay una <em>software developer</em> de verdad</h3>
+          <div class="tech-creds">
+            <div class="tech-cred">
+              <span class="t-mono">2021 — 2024 · baufest</span>
+              <strong>3 años como Java developer</strong> en proyectos para Banco BBVA e ICBC: migración de servicios y microservicios, integración de datos, pruebas y deploys de punta a punta.
+            </div>
+            <div class="tech-cred">
+              <span class="t-mono">2024 — 2025 · oracle</span>
+              En <strong>Oracle Corporation</strong> gestionó clientes enterprise (Banco Macro, Federación Patronal y más) y pasó al equipo de <strong>Cloud Adoption Engineering</strong>: incidentes y adopción de Oracle Cloud, más un laboratorio de innovación con Oracle APEX, Database 23ai y AI Vector Search.
+            </div>
+            <div class="tech-cred">
+              <span class="t-mono">formación</span>
+              Doble certificación <strong>Oracle Cloud</strong> (Infrastructure y Data Management), tecnicatura en programación y estudiante de <strong>Ingeniería en Sistemas (UTN)</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="terminal" aria-hidden="true">
+          <div class="terminal-bar"><i></i><i></i><i></i><span>abby — review</span></div>
+          <div class="terminal-body">
+            <p><span class="t-prompt">$</span> abby review --app tu-app</p>
+            <p><span class="t-dim">&gt;</span> analizando onboarding <span class="t-ok">✓</span></p>
+            <p><span class="t-dim">&gt;</span> probando el flujo real <span class="t-ok">✓</span></p>
+            <p><span class="t-dim">&gt;</span> guion con hook listo <span class="t-ok">✓</span></p>
+            <p><span class="t-dim">&gt;</span> <span class="t-accent-txt">grabando en 9:16</span> <span class="cursor"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-formats stagger">
+        <div class="format-card">
+          <span class="num">[01]</span>
+          <h3>Review en rutina real</h3>
+          <p>La app aparece en un momento del día real, no como lista de funciones.</p>
+        </div>
+        <div class="format-card">
+          <span class="num">[02]</span>
+          <h3>Problema → Solución</h3>
+          <p>Arranca con el dolor concreto y muestra cómo la app lo resuelve.</p>
+        </div>
+        <div class="format-card">
+          <span class="num">[03]</span>
+          <h3>Screen recording + voz</h3>
+          <p>Pantalla real con dedo visible y una voz en off que guía sin aburrir.</p>
+        </div>
+        <div class="format-card">
+          <span class="num">[04]</span>
+          <h3>Hablando a cámara</h3>
+          <p>Recomendación entre amigas con el detalle técnico justo.</p>
+        </div>
+        <div class="format-card">
+          <span class="num">[05]</span>
+          <h3>Unboxing de gadgets</h3>
+          <p>Primeras impresiones, setup y uso real de productos tech.</p>
+        </div>
+        <div class="format-card">
+          <span class="num">[06]</span>
+          <h3>Piezas para paid ads</h3>
+          <p>15-30 segundos con hook, demo y CTA, listas para Meta y TikTok Ads.</p>
+        </div>
+      </div>
+
+      <div class="tech-phones stagger">
+        <div class="tech-phone">
+          <div class="frame">
+            <div class="screen s-fintech">
+              <div class="app-icon">$</div>
+              <span class="vertical-name">Fintech</span>
+              <div class="skeleton"><i></i><i></i><i></i></div>
+              <span class="soon">Próximamente</span>
+            </div>
+          </div>
+          <p class="label">Review en rutina</p>
+        </div>
+        <div class="tech-phone">
+          <div class="frame">
+            <div class="screen s-delivery">
+              <div class="app-icon">◍</div>
+              <span class="vertical-name">Delivery</span>
+              <div class="skeleton"><i></i><i></i><i></i></div>
+              <span class="soon">Próximamente</span>
+            </div>
+          </div>
+          <p class="label">Problema → Solución</p>
+        </div>
+        <div class="tech-phone">
+          <div class="frame">
+            <div class="screen s-fitness">
+              <div class="app-icon">▲</div>
+              <span class="vertical-name">Fitness</span>
+              <div class="skeleton"><i></i><i></i><i></i></div>
+              <span class="soon">Próximamente</span>
+            </div>
+          </div>
+          <p class="label">Screen recording</p>
+        </div>
+        <div class="tech-phone">
+          <div class="frame">
+            <div class="screen s-deporte">
+              <div class="app-icon">●</div>
+              <span class="vertical-name">Deportes</span>
+              <div class="skeleton"><i></i><i></i><i></i></div>
+              <span class="soon">Próximamente</span>
+            </div>
+          </div>
+          <p class="label">Hablando a cámara</p>
+        </div>
+      </div>
+
+      <div class="tech-cta">
+        <p>Esta línea está arrancando: los primeros spots se graban ahora. <strong>¿Querés que tu app sea de las primeras?</strong></p>
+        <a class="btn-tech" href="#contacto">Hablemos de tu app →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ───── Servicios ───── -->
   <section class="section reveal" id="servicios">
     <h2 class="section-title">Servicios</h2>
@@ -986,7 +1362,7 @@
   </section>
 </main>
 
-<footer>Abigail Quiña · UGC Creator · Buenos Aires</footer>
+<footer>Abby — Abigail Quiña · UGC Creator · Buenos Aires</footer>
 
 <!-- ───── Lightbox ───── -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
@@ -1054,7 +1430,7 @@
   }
 
   // Link activo en la nav según sección visible
-  const sections = ['sobre-mi', 'fotos', 'videos', 'servicios', 'precios', 'contacto']
+  const sections = ['tech', 'sobre-mi', 'fotos', 'videos', 'servicios', 'precios', 'contacto']
     .map(id => document.getElementById(id));
   const navAnchors = [...document.querySelectorAll('.nav-links a')];
   const ioNav = new IntersectionObserver(entries => {
