@@ -368,54 +368,6 @@
   }
   .service-card p { font-size: 0.95rem; }
 
-  /* ───── Precios ───── */
-  #precios { background: var(--cream-deep); }
-  #precios .inner { max-width: 1200px; margin: 0 auto; padding: 100px 24px; }
-  .price-group { margin-bottom: 56px; }
-  .price-group:last-of-type { margin-bottom: 24px; }
-  .price-group h3 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 32px;
-  }
-  .price-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 24px;
-    max-width: 980px;
-    margin: 0 auto;
-  }
-  .price-card {
-    background: var(--white);
-    border-radius: 18px;
-    padding: 36px 24px;
-    text-align: center;
-    box-shadow: 0 10px 34px rgba(107, 66, 38, 0.08);
-  }
-  .price-card .qty {
-    font-size: 0.95rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .price-card .amount {
-    font-family: 'Italiana', serif;
-    font-size: 2.6rem;
-    color: var(--terra);
-  }
-  .price-card .per {
-    font-size: 0.85rem;
-    color: var(--ink);
-    opacity: 0.75;
-  }
-  .price-notes {
-    text-align: center;
-    font-size: 0.95rem;
-    max-width: 620px;
-    margin: 0 auto;
-  }
-  .price-notes em { color: var(--terra); }
-
   /* ───── Contacto ───── */
   .contact {
     display: grid;
@@ -890,7 +842,6 @@
     <li><a href="#videos">Videos</a></li>
     <li><a href="#tech">Tech &amp; Apps</a></li>
     <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#precios">Precios</a></li>
     <li class="nav-cta"><a href="#contacto">Trabajemos juntos</a></li>
   </ul>
 </nav>
@@ -1134,15 +1085,15 @@
           <div class="tech-creds">
             <div class="tech-cred">
               <span class="t-mono">2021 — 2024 · baufest</span>
-              <strong>3 años como Java developer</strong> en proyectos para Banco BBVA e ICBC: migración de servicios y microservicios, integración de datos, pruebas y deploys de punta a punta.
+              <strong>Java developer</strong> en proyectos para bancos.
             </div>
             <div class="tech-cred">
               <span class="t-mono">2024 — 2025 · oracle</span>
-              En <strong>Oracle Corporation</strong> gestionó clientes enterprise (Banco Macro, Federación Patronal y más) y pasó al equipo de <strong>Cloud Adoption Engineering</strong>: incidentes y adopción de Oracle Cloud, más un laboratorio de innovación con Oracle APEX, Database 23ai y AI Vector Search.
+              Clientes enterprise y <strong>Cloud Adoption Engineering</strong>.
             </div>
             <div class="tech-cred">
               <span class="t-mono">formación</span>
-              Doble certificación <strong>Oracle Cloud</strong> (Infrastructure y Data Management), tecnicatura en programación y estudiante de <strong>Ingeniería en Sistemas (UTN)</strong>.
+              Certificada en <strong>Oracle Cloud</strong> · Ingeniería en Sistemas (UTN).
             </div>
           </div>
         </div>
@@ -1293,55 +1244,6 @@
     </div>
   </section>
 
-  <!-- ───── Precios ───── -->
-  <section id="precios" class="reveal">
-    <div class="inner">
-      <h2 class="section-title">Precios</h2>
-      <div class="section-rule"></div>
-      <div class="price-group">
-        <h3>Contenido orgánico</h3>
-        <div class="price-cards">
-          <div class="price-card">
-            <p class="qty">8 videos / mes</p>
-            <p class="amount">$900</p>
-            <p class="per">USD por mes</p>
-          </div>
-          <div class="price-card">
-            <p class="qty">10 fotos / mes</p>
-            <p class="amount">$400</p>
-            <p class="per">USD por mes</p>
-          </div>
-          <div class="price-card">
-            <p class="qty">13 videos / mes</p>
-            <p class="amount">$1800</p>
-            <p class="per">USD por mes</p>
-          </div>
-        </div>
-      </div>
-      <div class="price-group">
-        <h3>Paid Ad Content</h3>
-        <div class="price-cards">
-          <div class="price-card">
-            <p class="qty">1 video · 15-30 seg</p>
-            <p class="amount">$190</p>
-            <p class="per">USD</p>
-          </div>
-          <div class="price-card">
-            <p class="qty">3 videos · 15-30 seg</p>
-            <p class="amount">$420</p>
-            <p class="per">USD</p>
-          </div>
-          <div class="price-card">
-            <p class="qty">5 videos · 15-30 seg</p>
-            <p class="amount">$800</p>
-            <p class="per">USD</p>
-          </div>
-        </div>
-      </div>
-      <p class="price-notes">Archivos raw: <em>+20% del precio del video</em>.<br>Precios en dólares (USD). Hay paquetes personalizables — escribime para más info.</p>
-    </div>
-  </section>
-
   <!-- ───── Contacto ───── -->
   <section class="section contact reveal" id="contacto">
     <img class="contact-photo" src="assets/img/contact.jpg" alt="Abigail">
@@ -1430,7 +1332,7 @@
   }
 
   // Link activo en la nav según sección visible
-  const sections = ['tech', 'sobre-mi', 'fotos', 'videos', 'servicios', 'precios', 'contacto']
+  const sections = ['tech', 'sobre-mi', 'fotos', 'videos', 'servicios', 'contacto']
     .map(id => document.getElementById(id));
   const navAnchors = [...document.querySelectorAll('.nav-links a')];
   const ioNav = new IntersectionObserver(entries => {
