@@ -588,32 +588,8 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  .tech-formats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-bottom: 64px;
-  }
-  @media (max-width: 900px) {
-    .tech-formats { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-  }
-  .format-card {
-    background: var(--t-panel);
-    border: 1px solid var(--t-line);
-    border-radius: 14px;
-    padding: 20px 18px;
-    transition: transform 0.25s, border-color 0.25s;
-  }
-  .format-card:hover { transform: translateY(-4px); border-color: rgba(232, 150, 90, 0.45); }
-  .format-card .num {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--t-accent);
-    display: block;
-    margin-bottom: 8px;
-  }
-  .format-card h3 { font-size: 0.98rem; margin-bottom: 6px; }
-  .format-card p { font-size: 0.85rem; color: var(--t-muted); }
+  .tech-examples { text-align: center; margin-bottom: 36px; }
+  .tech-examples .t-mono { font-size: 0.85rem; }
 
   .tech-phones {
     display: flex;
@@ -1105,38 +1081,7 @@
         </div>
       </div>
 
-      <div class="tech-formats stagger">
-        <div class="format-card">
-          <span class="num">[01]</span>
-          <h3>Review en rutina real</h3>
-          <p>La app aparece en un momento del día real, no como lista de funciones.</p>
-        </div>
-        <div class="format-card">
-          <span class="num">[02]</span>
-          <h3>Problema → Solución</h3>
-          <p>Arranca con el dolor concreto y muestra cómo la app lo resuelve.</p>
-        </div>
-        <div class="format-card">
-          <span class="num">[03]</span>
-          <h3>Screen recording + voz</h3>
-          <p>Pantalla real con dedo visible y una voz en off que guía sin aburrir.</p>
-        </div>
-        <div class="format-card">
-          <span class="num">[04]</span>
-          <h3>Hablando a cámara</h3>
-          <p>Recomendación entre amigas con el detalle técnico justo.</p>
-        </div>
-        <div class="format-card">
-          <span class="num">[05]</span>
-          <h3>Unboxing de gadgets</h3>
-          <p>Primeras impresiones, setup y uso real de productos tech.</p>
-        </div>
-        <div class="format-card">
-          <span class="num">[06]</span>
-          <h3>Piezas para paid ads</h3>
-          <p>15-30 segundos con hook, demo y CTA, listas para Meta y TikTok Ads.</p>
-        </div>
-      </div>
+      <h3 class="tech-examples"><span class="t-mono">// ejemplos</span></h3>
 
       <div class="tech-phones stagger">
         <div class="tech-phone">
