@@ -799,6 +799,43 @@
   .to-top.show { opacity: 1; pointer-events: auto; transform: none; }
   .to-top:hover { background: var(--terra-dark); }
 
+  /* ───── Funkos de Abby ───── */
+  .funko { display: block; height: auto; filter: drop-shadow(0 12px 16px rgba(107, 66, 38, 0.16)); }
+  .niche-head { display: flex; align-items: flex-end; justify-content: center; gap: 14px; margin-bottom: 40px; }
+  .niche-head h3 { margin-bottom: 0; }
+  .niche-head .funko { width: 72px; transform: rotate(-4deg); transition: transform 0.3s ease; }
+  .niche-head:hover .funko { transform: rotate(3deg) translateY(-5px); }
+
+  .tech-funko-row { display: flex; align-items: center; gap: 18px; margin-top: 26px; }
+  .tech-funko-row .funko { width: 92px; filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.5)); transition: transform 0.3s ease; }
+  .tech-funko-row:hover .funko { transform: translateY(-5px) rotate(2deg); }
+  .tech-funko-row p { max-width: 24ch; }
+
+  .contact-funko { display: flex; align-items: center; gap: 16px; margin-top: 30px; }
+  .contact-funko .funko { width: 84px; transform: rotate(3deg); transition: transform 0.3s ease; }
+  .contact-funko:hover .funko { transform: rotate(-3deg) translateY(-5px); }
+  .contact-funko p { font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terra); margin: 0; max-width: 24ch; }
+  @media (max-width: 820px) { .contact-funko { justify-content: center; } }
+
+  .funko-shelf { text-align: center; padding: 60px 24px 0; position: relative; z-index: 1; }
+  .funko-shelf-title {
+    font-family: 'Italiana', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 26px;
+  }
+  .funko-shelf-row {
+    display: flex; justify-content: center; align-items: flex-end;
+    gap: 22px; flex-wrap: wrap;
+    max-width: 720px; margin: 0 auto;
+    padding: 0 12px 4px;
+    border-bottom: 1px solid rgba(139, 94, 60, 0.3);
+  }
+  .funko-shelf-row .funko { width: 62px; transition: transform 0.25s ease; }
+  .funko-shelf-row .funko:hover { transform: translateY(-8px) rotate(-4deg); }
+
   @media (prefers-reduced-motion: reduce) {
     .reveal, .stagger > * { opacity: 1; transform: none; transition: none; }
     .hero > div > *, .hero-photo { opacity: 1; transform: none; animation: none; }
@@ -909,7 +946,10 @@
     <div class="section-rule"></div>
 
     <div class="niche">
-      <h3>Moda</h3>
+      <div class="niche-head">
+        <img class="funko" src="assets/funkos/funko-moda.svg" alt="Funko de Abby versión moda, con gorro de piel y lentes redondos" width="72" height="98">
+        <h3>Moda</h3>
+      </div>
       <div class="phones">
         <div class="phone">
           <div class="phone-frame">
@@ -943,7 +983,10 @@
     </div>
 
     <div class="niche">
-      <h3>Belleza</h3>
+      <div class="niche-head">
+        <img class="funko" src="assets/funkos/funko-belleza.svg" alt="Funko de Abby versión belleza, con un perfume en la mano" width="72" height="98">
+        <h3>Belleza</h3>
+      </div>
       <div class="phones">
         <div class="phone">
           <div class="phone-frame">
@@ -977,7 +1020,10 @@
     </div>
 
     <div class="niche">
-      <h3>Home</h3>
+      <div class="niche-head">
+        <img class="funko" src="assets/funkos/funko-home.svg" alt="Funko de Abby versión home, en pijama con una taza de café" width="72" height="98">
+        <h3>Home</h3>
+      </div>
       <div class="phones">
         <div class="phone">
           <div class="phone-frame">
@@ -1011,7 +1057,10 @@
     </div>
 
     <div class="niche">
-      <h3>Más nichos</h3>
+      <div class="niche-head">
+        <img class="funko" src="assets/funkos/funko-gastro.svg" alt="Funko de Abby versión gastronomía, con una copa de vino" width="72" height="98">
+        <h3>Más nichos</h3>
+      </div>
       <div class="phones">
         <div class="phone">
           <div class="phone-frame">
@@ -1067,6 +1116,10 @@
               <span class="t-mono">formación</span>
               Certificada en <strong>Oracle Cloud</strong> · Ingeniería en Sistemas (UTN).
             </div>
+          </div>
+          <div class="tech-funko-row">
+            <img class="funko" src="assets/funkos/funko-tech.svg" alt="Funko de Abby en modo developer, con auriculares y laptop" width="92" height="125">
+            <p class="t-mono">// abby_funko<br>modo dev: online</p>
           </div>
         </div>
         <div class="terminal" aria-hidden="true">
@@ -1201,8 +1254,25 @@
           +54 9 11 3264-0482
         </a>
       </div>
+      <div class="contact-funko">
+        <img class="funko" src="assets/funkos/funko-saludo.svg" alt="Funko de Abby saludando" width="84" height="115">
+        <p>Mi versión funko también quiere trabajar con tu marca</p>
+      </div>
     </div>
   </section>
+
+  <!-- ───── Colección funko ───── -->
+  <div class="funko-shelf reveal" aria-label="La colección funko de Abby">
+    <p class="funko-shelf-title">La colección Abby</p>
+    <div class="funko-shelf-row stagger">
+      <img class="funko" src="assets/funkos/funko-moda.svg" alt="" title="Moda" width="62" height="85">
+      <img class="funko" src="assets/funkos/funko-belleza.svg" alt="" title="Belleza" width="62" height="85">
+      <img class="funko" src="assets/funkos/funko-home.svg" alt="" title="Home" width="62" height="85">
+      <img class="funko" src="assets/funkos/funko-gastro.svg" alt="" title="Gastronomía" width="62" height="85">
+      <img class="funko" src="assets/funkos/funko-tech.svg" alt="" title="Tech &amp; Apps" width="62" height="85">
+      <img class="funko" src="assets/funkos/funko-saludo.svg" alt="" title="Trabajemos juntos" width="62" height="85">
+    </div>
+  </div>
 </main>
 
 <footer>Abby — Abigail Quiña · UGC Creator · Buenos Aires</footer>

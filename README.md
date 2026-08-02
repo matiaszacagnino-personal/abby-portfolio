@@ -2,7 +2,9 @@
 
 Versión web del portfolio de Canva de Abby (Abigail Quiña). Sitio estático (un solo `index.html` + assets), sin dependencias ni build: se abre con doble click o se sube a cualquier hosting estático.
 
-El portfolio mantiene la estética glamour (crema, serif Italiana, terracota) y tiene una **sección Tech & Apps** (`#tech`, después del marquee) que cambia de clima: fondo oscuro, Space Grotesk + IBM Plex Mono, acento ámbar. Vende el perfil developer de Abby (Baufest/Oracle, según su CV) como credibilidad para reviews de apps de fintech, delivery, fitness y gadgets. Los mockups de video de esa sección son placeholders "próximamente" hasta grabar los primeros spots tech.
+El portfolio mantiene la estética glamour (crema, serif Italiana, terracota) y tiene una **sección Tech & Apps** (`#tech`, después del marquee) que cambia de clima: fondo oscuro, Space Grotesk + IBM Plex Mono, acento ámbar.
+
+Como firma visual, el sitio tiene **funkos de Abby**: ilustraciones SVG estilo Funko Pop (`assets/funkos/`) dibujadas a mano con la paleta del sitio. Hay una versión por nicho (moda con el gorro de piel parisino, belleza con perfume, home en pijama con café, gastro con copa de vino, modo dev con auriculares y laptop, y una que saluda). Aparecen como mascotas junto a los títulos de los nichos de Videos, en la sección Tech, en Contacto, y en la estantería «La colección Abby» arriba del footer. Son SVG livianos sin dependencias; para editarlos alcanza con abrir el archivo (viewBox 220×300). Vende el perfil developer de Abby (Baufest/Oracle, según su CV) como credibilidad para reviews de apps de fintech, delivery, fitness y gadgets. Los mockups de video de esa sección son placeholders "próximamente" hasta grabar los primeros spots tech.
 
 ## Qué mejora respecto del Canva
 

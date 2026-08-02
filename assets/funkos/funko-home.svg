@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 300" role="img" aria-labelledby="fhTitle">
+<title id="fhTitle">Funko de Abby — Home</title>
+<!-- base y sombra -->
+<ellipse cx="110" cy="289" rx="58" ry="7" fill="#6B4226" opacity=".12"/>
+<ellipse cx="110" cy="270" rx="50" ry="10" fill="#2B1F15"/>
+<!-- rodete -->
+<circle cx="110" cy="22" r="18" fill="#5F3E27"/>
+<path d="M98 14 Q110 6 122 14" stroke="#B5804F" stroke-width="4" fill="none" stroke-linecap="round" opacity=".6"/>
+<ellipse cx="110" cy="37" rx="13" ry="6" fill="#C98A67"/>
+<!-- piernas de pijama -->
+<rect x="85" y="206" width="18" height="46" rx="8" fill="#F5EDE5"/>
+<rect x="117" y="206" width="18" height="46" rx="8" fill="#F5EDE5"/>
+<circle cx="94" cy="228" r="3" fill="#C98A67"/>
+<circle cx="126" cy="236" r="3" fill="#C98A67"/>
+<!-- pantuflas -->
+<ellipse cx="96" cy="257" rx="16" ry="7" fill="#EFE3D3"/>
+<ellipse cx="124" cy="257" rx="16" ry="7" fill="#EFE3D3"/>
+<ellipse cx="96" cy="256" rx="9" ry="4" fill="#E2D2BC"/>
+<ellipse cx="124" cy="256" rx="9" ry="4" fill="#E2D2BC"/>
+<!-- torso pijama -->
+<rect x="72" y="146" width="76" height="66" rx="17" fill="#F5EDE5"/>
+<circle cx="84" cy="162" r="3" fill="#C98A67"/>
+<circle cx="138" cy="158" r="3" fill="#C98A67"/>
+<circle cx="132" cy="196" r="3" fill="#C98A67"/>
+<circle cx="80" cy="192" r="3" fill="#C98A67"/>
+<path d="M102 146 L110 158 L118 146" stroke="#C98A67" stroke-width="2.5" fill="none"/>
+<!-- brazos hacia la taza -->
+<rect x="58" y="150" width="16" height="36" rx="8" fill="#F5EDE5"/>
+<rect x="146" y="150" width="16" height="36" rx="8" fill="#F5EDE5"/>
+<path d="M66 184 Q76 198 90 199" stroke="#F5CBA6" stroke-width="13" fill="none" stroke-linecap="round"/>
+<path d="M154 184 Q144 198 130 199" stroke="#F5CBA6" stroke-width="13" fill="none" stroke-linecap="round"/>
+<!-- vapor -->
+<path d="M102 172 C98 164 106 162 102 152" stroke="#A99C8F" stroke-width="3" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M118 172 C114 164 122 162 118 152" stroke="#A99C8F" stroke-width="3" fill="none" stroke-linecap="round" opacity=".6"/>
+<!-- taza -->
+<path d="M124 184 a9 9 0 0 1 0 18" stroke="#8B5E3C" stroke-width="5" fill="none"/>
+<rect x="93" y="178" width="34" height="28" rx="6" fill="#8B5E3C"/>
+<path d="M110 190 c-2.5 -4.5 -9 -3.5 -9 1.5 c0 3.5 5 6 9 9 c4 -3 9 -5.5 9 -9 c0 -5 -6.5 -6 -9 -1.5 z" fill="#FBF6F1"/>
+<circle cx="92" cy="200" r="8" fill="#F5CBA6"/>
+<circle cx="128" cy="200" r="8" fill="#F5CBA6"/>
+<!-- cabeza -->
+<rect x="50" y="24" width="120" height="122" rx="40" fill="#F5CBA6"/>
+<!-- raya al medio, pelo tirante -->
+<path d="M110 28 C84 28 61 48 55 92 C60 97 67 96 70 90 C75 60 90 46 108 43 L110 35 Z" fill="#5F3E27"/>
+<path d="M110 28 C136 28 159 48 165 92 C160 97 153 96 150 90 C145 60 130 46 112 43 L110 35 Z" fill="#5F3E27"/>
+<path d="M53 66 C49 96 51 118 58 134 C63 124 59 94 64 72 Z" fill="#5F3E27"/>
+<path d="M167 66 C171 96 169 118 162 134 C157 124 161 94 156 72 Z" fill="#5F3E27"/>
+<!-- cejas -->
+<path d="M72 84 Q84 76 97 81" stroke="#5F3E27" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M123 81 Q136 76 148 84" stroke="#5F3E27" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<!-- ojos cerrados de gustito -->
+<path d="M76 102 Q85 110 94 102" stroke="#2B2320" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M126 102 Q135 110 144 102" stroke="#2B2320" stroke-width="4" fill="none" stroke-linecap="round"/>
+<!-- mejillas y labios -->
+<ellipse cx="74" cy="119" rx="9" ry="5" fill="#E89B7B" opacity=".45"/>
+<ellipse cx="146" cy="119" rx="9" ry="5" fill="#E89B7B" opacity=".45"/>
+<path d="M101 128 C104 131 108 132 110 132 C112 132 116 131 119 128 C116 135 104 135 101 128 Z" fill="#C97B62"/>
+</svg>

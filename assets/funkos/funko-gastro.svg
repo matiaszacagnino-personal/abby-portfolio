@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 300" role="img" aria-labelledby="fgTitle">
+<title id="fgTitle">Funko de Abby — Gastronomía y lifestyle</title>
+<!-- base y sombra -->
+<ellipse cx="110" cy="289" rx="58" ry="7" fill="#6B4226" opacity=".12"/>
+<ellipse cx="110" cy="270" rx="50" ry="10" fill="#2B1F15"/>
+<!-- pelo atrás -->
+<path d="M110 18 C64 18 45 56 47 98 C48 132 42 168 50 198 C55 219 76 226 86 217 L86 150 L134 150 L134 217 C144 226 165 219 170 198 C178 168 172 132 173 98 C175 56 156 18 110 18 Z" fill="#5F3E27"/>
+<path d="M55 112 C52 148 49 178 55 200" stroke="#B5804F" stroke-width="5" fill="none" stroke-linecap="round" opacity=".5"/>
+<path d="M165 112 C168 148 171 178 165 200" stroke="#B5804F" stroke-width="5" fill="none" stroke-linecap="round" opacity=".5"/>
+<!-- piernas y tacos -->
+<rect x="88" y="222" width="15" height="32" rx="7" fill="#F5CBA6"/>
+<rect x="117" y="222" width="15" height="32" rx="7" fill="#F5CBA6"/>
+<ellipse cx="96" cy="256" rx="13" ry="6" fill="#211A15"/>
+<ellipse cx="124" cy="256" rx="13" ry="6" fill="#211A15"/>
+<rect x="88" y="256" width="5" height="8" fill="#211A15"/>
+<rect x="116" y="256" width="5" height="8" fill="#211A15"/>
+<!-- vestido bordó -->
+<path d="M84 146 L136 146 C148 152 152 162 152 174 L156 224 C156 232 148 236 138 236 L82 236 C72 236 64 232 64 224 L68 174 C68 162 72 152 84 146 Z" fill="#7B2D3B"/>
+<path d="M100 148 L110 162 L120 148" stroke="#FBF6F1" stroke-width="2" fill="none" opacity=".55"/>
+<!-- brazo izquierdo (abajo) -->
+<rect x="54" y="152" width="16" height="54" rx="8" fill="#F5CBA6"/>
+<circle cx="62" cy="210" r="7" fill="#F5CBA6"/>
+<!-- cabeza -->
+<rect x="50" y="24" width="120" height="122" rx="40" fill="#F5CBA6"/>
+<!-- raya al medio -->
+<path d="M110 28 C84 28 61 48 55 92 C60 97 67 96 70 90 C75 60 90 46 108 43 L110 35 Z" fill="#5F3E27"/>
+<path d="M110 28 C136 28 159 48 165 92 C160 97 153 96 150 90 C145 60 130 46 112 43 L110 35 Z" fill="#5F3E27"/>
+<path d="M53 66 C48 100 51 126 61 142 C67 130 61 96 65 72 Z" fill="#5F3E27"/>
+<path d="M167 66 C172 100 169 126 159 142 C153 130 159 96 155 72 Z" fill="#5F3E27"/>
+<!-- cejas -->
+<path d="M72 84 Q84 76 97 81" stroke="#5F3E27" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M123 81 Q136 76 148 84" stroke="#5F3E27" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<!-- ojos -->
+<circle cx="85" cy="102" r="10" fill="#2B2320"/>
+<circle cx="135" cy="102" r="10" fill="#2B2320"/>
+<circle cx="82" cy="98" r="3" fill="#FFFFFF"/>
+<circle cx="132" cy="98" r="3" fill="#FFFFFF"/>
+<!-- mejillas y labios -->
+<ellipse cx="74" cy="119" rx="9" ry="5" fill="#E89B7B" opacity=".45"/>
+<ellipse cx="146" cy="119" rx="9" ry="5" fill="#E89B7B" opacity=".45"/>
+<path d="M101 128 C104 131 108 132 110 132 C112 132 116 131 119 128 C116 135 104 135 101 128 Z" fill="#C97B62"/>
+<!-- destello -->
+<path d="M186 74 l2.5 6.5 6.5 2.5 -6.5 2.5 -2.5 6.5 -2.5 -6.5 -6.5 -2.5 6.5 -2.5 z" fill="#C9A227" opacity=".75"/>
+<!-- brazo derecho (levantado con copa) -->
+<path d="M146 156 C158 158 164 150 166 140 L168 130 L154 126 C152 140 150 148 144 154 Z" fill="#F5CBA6"/>
+<!-- copa de vino -->
+<path d="M156 94 C156 110 161 117 167 117 C173 117 178 110 178 94 Z" fill="#FFFFFF" opacity=".2"/>
+<path d="M158 100 C158 110 162 114.5 167 114.5 C172 114.5 176 110 176 100 Z" fill="#8E2D3F"/>
+<path d="M156 94 C156 110 161 117 167 117 C173 117 178 110 178 94 Z" fill="none" stroke="#EFE3D3" stroke-width="2"/>
+<path d="M167 117 L167 126" stroke="#EFE3D3" stroke-width="2.5"/>
+<path d="M160 128 L174 128" stroke="#EFE3D3" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="167" cy="129" r="8" fill="#F5CBA6"/>
+</svg>
