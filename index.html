@@ -370,13 +370,24 @@
     opacity: 0.75;
     margin-bottom: 14px;
   }
-  .brands-names {
-    font-family: 'Italiana', serif;
-    font-size: clamp(1.15rem, 2.6vw, 1.7rem);
-    letter-spacing: 0.16em;
-    color: var(--terra);
+  .brands-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 26px 56px;
+    opacity: 0.92;
   }
-  .brands-names span { opacity: 0.45; margin: 0 10px; }
+  .brands-logos img { display: block; }
+  .brand-viginti { height: 30px; }
+  .brand-musas { height: 52px; }
+  .brand-malibu { height: 26px; }
+  @media (max-width: 560px) {
+    .brands-logos { gap: 20px 34px; }
+    .brand-viginti { height: 24px; }
+    .brand-musas { height: 42px; }
+    .brand-malibu { height: 21px; }
+  }
 
   /* ───── Servicios ───── */
   .services-grid {
@@ -1113,7 +1124,11 @@
 
     <div class="brands-strip reveal">
       <p class="brands-title">Contenido creado para</p>
-      <p class="brands-names">OK VIGINTI <span>·</span> MUSAS <span>·</span> MALIBU NAILS SALON</p>
+      <div class="brands-logos">
+        <img src="assets/img/brands/brand-viginti.png" alt="OK Viginti" class="brand-viginti">
+        <img src="assets/img/brands/brand-musas.png" alt="Musas" class="brand-musas">
+        <img src="assets/img/brands/brand-malibu.png" alt="Malibú Nails Salón" class="brand-malibu">
+      </div>
     </div>
   </section>
 
