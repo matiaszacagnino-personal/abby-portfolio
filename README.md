@@ -19,10 +19,15 @@ AAC 96k, `+faststart`), convertidos con ffmpeg desde los .MOV originales que est
 `Desktop/Abby Project/Portfolio/Videos/`. Cada poster de `assets/posters/` es un frame del
 propio video, así el preview siempre coincide con lo que se reproduce.
 
-13 videos son de los nichos UGC (moda ×4, belleza ×3, home ×2, joyería, skincare, gastronomía
-y estética) y 2 son de la sección Tech: `tech-ia.mp4` (review de ChatGPT con screen recording)
-y `tech-luz.mp4` (unboxing de una luz LED para sets). Los mockups de Fintech y Delivery de la
-sección Tech siguen como placeholders "Próximamente".
+Los nichos UGC muestran 4 videos por fila (o menos) y algunos tienen un botón **"Ver más"**
+que expande videos extra (clase `.phone.extra`, toggle `.niche.expanded`): Moda suma el
+unboxing de OK Viginti, el styling de Musas y un try on; Belleza suma las uñas de Malibu
+Nails; Más nichos suma el de Viajes (salón VIP + vuelo). Esos 5 salieron de los reels de
+Instagram (los mp4 fuente están en `Desktop/Abby Project/Portfolio/IG descargas/`).
+La sección Tech tiene `tech-ia.mp4` (review de ChatGPT con screen recording) y
+`tech-luz.mp4` (unboxing de una luz LED); Fintech y Delivery siguen "Próximamente".
+Al final de Videos hay una franja "Contenido creado para" con las marcas reales
+(OK Viginti, Musas, Malibu Nails Salon) — solo texto, sin logos ajenos.
 
 ## Deploy
 

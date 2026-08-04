@@ -338,6 +338,45 @@
     text-transform: uppercase;
     color: var(--terra);
   }
+  .phone.extra { display: none; }
+  .niche.expanded .phone.extra { display: block; }
+  .more-btn {
+    display: block;
+    margin: 36px auto 0;
+    padding: 10px 34px;
+    background: none;
+    border: 1px solid var(--terra);
+    border-radius: 999px;
+    color: var(--terra);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .more-btn:hover { background: var(--terra); color: var(--white); }
+  .brands-strip {
+    margin-top: 88px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(139, 94, 60, 0.25);
+    text-align: center;
+  }
+  .brands-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.75;
+    margin-bottom: 14px;
+  }
+  .brands-names {
+    font-family: 'Italiana', serif;
+    font-size: clamp(1.15rem, 2.6vw, 1.7rem);
+    letter-spacing: 0.16em;
+    color: var(--terra);
+  }
+  .brands-names span { opacity: 0.45; margin: 0 10px; }
 
   /* ───── Servicios ───── */
   .services-grid {
@@ -950,7 +989,29 @@
           </div>
           <p class="phone-label">Aesthetic</p>
         </div>
+        <div class="phone extra">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/moda-viginti.jpg" src="assets/videos/moda-viginti.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Unboxing · OK Viginti</p>
+        </div>
+        <div class="phone extra">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/moda-musas.jpg" src="assets/videos/moda-musas.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Styling · Musas</p>
+        </div>
+        <div class="phone extra">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/moda-probador.jpg" src="assets/videos/moda-probador.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Try on</p>
+        </div>
       </div>
+      <button class="more-btn" aria-expanded="false">Ver más</button>
     </div>
 
     <div class="niche">
@@ -977,7 +1038,15 @@
           </div>
           <p class="phone-label">Aesthetic</p>
         </div>
+        <div class="phone extra">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/belleza-nails-salon.jpg" src="assets/videos/belleza-nails-salon.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Uñas · Malibu Nails</p>
+        </div>
       </div>
+      <button class="more-btn" aria-expanded="false">Ver más</button>
     </div>
 
     <div class="niche">
@@ -1031,7 +1100,20 @@
           </div>
           <p class="phone-label">Estética</p>
         </div>
+        <div class="phone extra">
+          <div class="phone-frame">
+            <video preload="none" playsinline poster="assets/posters/viajes-vip.jpg" src="assets/videos/viajes-vip.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
+          </div>
+          <p class="phone-label">Viajes</p>
+        </div>
       </div>
+      <button class="more-btn" aria-expanded="false">Ver más</button>
+    </div>
+
+    <div class="brands-strip reveal">
+      <p class="brands-title">Contenido creado para</p>
+      <p class="brands-names">OK VIGINTI <span>·</span> MUSAS <span>·</span> MALIBU NAILS SALON</p>
     </div>
   </section>
 
@@ -1233,6 +1315,19 @@
     video.addEventListener('click', () => { video.pause(); });
     video.addEventListener('pause', () => phone.classList.remove('playing'));
     video.addEventListener('ended', () => phone.classList.remove('playing'));
+  });
+
+  // Ver más / Ver menos por nicho
+  document.querySelectorAll('.more-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const niche = btn.closest('.niche');
+      const open = niche.classList.toggle('expanded');
+      btn.textContent = open ? 'Ver menos' : 'Ver más';
+      btn.setAttribute('aria-expanded', open);
+      if (!open) {
+        niche.querySelectorAll('.phone.extra video').forEach(v => { v.pause(); });
+      }
+    });
   });
 
   // Aparición al scrollear (secciones y grillas escalonadas)
