@@ -24,11 +24,6 @@ y estética) y 2 son de la sección Tech: `tech-ia.mp4` (review de ChatGPT con s
 y `tech-luz.mp4` (unboxing de una luz LED para sets). Los mockups de Fintech y Delivery de la
 sección Tech siguen como placeholders "Próximamente".
 
-## Pendientes antes de publicar
-
-1. **Redes**: completar los links reales de Instagram y TikTok en el hero
-   (buscar el comentario `TODO` en `index.html`).
-
 ## Deploy
 
 Cualquiera de estas opciones sirve:
