@@ -645,6 +645,13 @@
     display: block; height: 8px; border-radius: 4px;
     background: rgba(233, 229, 222, 0.1);
   }
+  .tech-phone .frame video {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .tech-phone.playing .play-btn { opacity: 0; pointer-events: none; }
   .tech-phone .skeleton i:nth-child(2) { width: 74%; margin: 0 auto; }
   .tech-phone .skeleton i:nth-child(3) { width: 52%; margin: 0 auto; }
   .tech-phone .soon {
@@ -966,13 +973,6 @@
           </div>
           <p class="phone-label">Aesthetic</p>
         </div>
-        <div class="phone">
-          <div class="phone-frame">
-            <video preload="none" playsinline poster="assets/posters/belleza-voz.jpg" src="assets/videos/belleza-voz.mp4"></video>
-            <button class="play-btn" aria-label="Reproducir"></button>
-          </div>
-          <p class="phone-label">Voz en off</p>
-        </div>
       </div>
     </div>
 
@@ -985,20 +985,6 @@
             <button class="play-btn" aria-label="Reproducir"></button>
           </div>
           <p class="phone-label">Hablando a cámara</p>
-        </div>
-        <div class="phone">
-          <div class="phone-frame">
-            <video preload="none" playsinline poster="assets/posters/home-voz.jpg" src="assets/videos/home-voz.mp4"></video>
-            <button class="play-btn" aria-label="Reproducir"></button>
-          </div>
-          <p class="phone-label">Voz en off</p>
-        </div>
-        <div class="phone">
-          <div class="phone-frame">
-            <video preload="none" playsinline poster="assets/posters/home-pijama.jpg" src="assets/videos/home-pijama.mp4"></video>
-            <button class="play-btn" aria-label="Reproducir"></button>
-          </div>
-          <p class="phone-label">Aesthetic</p>
         </div>
         <div class="phone">
           <div class="phone-frame">
@@ -1029,17 +1015,17 @@
         </div>
         <div class="phone">
           <div class="phone-frame">
-            <video preload="none" playsinline poster="assets/posters/lifestyle-honey.jpg" src="assets/videos/lifestyle-honey.mp4"></video>
+            <video preload="none" playsinline poster="assets/posters/lifestyle-cafe.jpg" src="assets/videos/lifestyle-cafe.mp4"></video>
             <button class="play-btn" aria-label="Reproducir"></button>
           </div>
-          <p class="phone-label">Lifestyle</p>
+          <p class="phone-label">Gastronomía</p>
         </div>
         <div class="phone">
           <div class="phone-frame">
-            <video preload="none" playsinline poster="assets/posters/lifestyle-colchon.jpg" src="assets/videos/lifestyle-colchon.mp4"></video>
+            <video preload="none" playsinline poster="assets/posters/estetica-podologia.jpg" src="assets/videos/estetica-podologia.mp4"></video>
             <button class="play-btn" aria-label="Reproducir"></button>
           </div>
-          <p class="phone-label">Home</p>
+          <p class="phone-label">Estética</p>
         </div>
       </div>
     </div>
@@ -1108,25 +1094,17 @@
         </div>
         <div class="tech-phone">
           <div class="frame">
-            <div class="screen s-fitness">
-              <div class="app-icon">▲</div>
-              <span class="vertical-name">Fitness</span>
-              <div class="skeleton"><i></i><i></i><i></i></div>
-              <span class="soon">Próximamente</span>
-            </div>
+            <video preload="none" playsinline poster="assets/posters/tech-ia.jpg" src="assets/videos/tech-ia.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
           </div>
-          <p class="label">Screen recording</p>
+          <p class="label">IA · Screen recording</p>
         </div>
         <div class="tech-phone">
           <div class="frame">
-            <div class="screen s-deporte">
-              <div class="app-icon">●</div>
-              <span class="vertical-name">Deportes</span>
-              <div class="skeleton"><i></i><i></i><i></i></div>
-              <span class="soon">Próximamente</span>
-            </div>
+            <video preload="none" playsinline poster="assets/posters/tech-luz.jpg" src="assets/videos/tech-luz.mp4"></video>
+            <button class="play-btn" aria-label="Reproducir"></button>
           </div>
-          <p class="label">Hablando a cámara</p>
+          <p class="label">Gadgets · Review</p>
         </div>
       </div>
 
@@ -1239,11 +1217,12 @@
   });
 
   // Videos: play/pausa con overlay; pausa los demás al reproducir uno
-  document.querySelectorAll('.phone').forEach(phone => {
+  document.querySelectorAll('.phone, .tech-phone').forEach(phone => {
     const video = phone.querySelector('video');
     const btn = phone.querySelector('.play-btn');
+    if (!video || !btn) return;
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.phone video').forEach(v => { if (v !== video) { v.pause(); v.closest('.phone').classList.remove('playing'); } });
+      document.querySelectorAll('.phone video, .tech-phone video').forEach(v => { if (v !== video) { v.pause(); v.closest('.phone, .tech-phone').classList.remove('playing'); } });
       video.play().then(() => phone.classList.add('playing'))
         .catch(() => { btn.style.opacity = '0.35'; btn.style.cursor = 'default'; });
     });

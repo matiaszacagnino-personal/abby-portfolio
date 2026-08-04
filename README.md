@@ -2,7 +2,7 @@
 
 Versión web del portfolio de Canva de Abby (Abigail Quiña). Sitio estático (un solo `index.html` + assets), sin dependencias ni build: se abre con doble click o se sube a cualquier hosting estático.
 
-El portfolio mantiene la estética glamour (crema, serif Italiana, terracota) y tiene una **sección Tech & Apps** (`#tech`, después del marquee) que cambia de clima: fondo oscuro, Space Grotesk + IBM Plex Mono, acento ámbar. Vende el perfil developer de Abby (Baufest/Oracle, según su CV) como credibilidad para reviews de apps de fintech, delivery, fitness y gadgets. Los mockups de video de esa sección son placeholders "próximamente" hasta grabar los primeros spots tech.
+El portfolio mantiene la estética glamour (crema, serif Italiana, terracota) y tiene una **sección Tech & Apps** (`#tech`) que cambia de clima: fondo oscuro, Space Grotesk + IBM Plex Mono, acento ámbar. Vende el perfil developer de Abby (Baufest/Oracle, según su CV) como credibilidad para reviews de apps de fintech, delivery, fitness y gadgets.
 
 ## Qué mejora respecto del Canva
 
@@ -12,18 +12,21 @@ El portfolio mantiene la estética glamour (crema, serif Italiana, terracota) y 
 - Botones directos de mail y WhatsApp.
 - Corrige los typos del original ("jewerly", "CONTEN T").
 
+## Videos
+
+Los 15 videos reales viven en `assets/videos/` (720×1280 9:16, H.264 CRF 27 a 30 fps, audio
+AAC 96k, `+faststart`), convertidos con ffmpeg desde los .MOV originales que están en
+`Desktop/Abby Project/Portfolio/Videos/`. Cada poster de `assets/posters/` es un frame del
+propio video, así el preview siempre coincide con lo que se reproduce.
+
+13 videos son de los nichos UGC (moda ×4, belleza ×3, home ×2, joyería, skincare, gastronomía
+y estética) y 2 son de la sección Tech: `tech-ia.mp4` (review de ChatGPT con screen recording)
+y `tech-luz.mp4` (unboxing de una luz LED para sets). Los mockups de Fintech y Delivery de la
+sección Tech siguen como placeholders "Próximamente".
+
 ## Pendientes antes de publicar
 
-1. **Videos**: poner los .mp4 reales en `assets/videos/` con estos nombres exactos
-   (por ahora se ve el poster con el botón de play atenuado si el archivo no está):
-   - `moda-unboxing.mp4`, `moda-camara.mp4`, `moda-outfit.mp4`, `moda-aesthetic.mp4`
-   - `belleza-camara.mp4`, `belleza-resena.mp4`, `belleza-aesthetic.mp4`, `belleza-voz.mp4`
-   - `home-camara.mp4`, `home-voz.mp4`, `home-pijama.mp4`, `home-manta.mp4`
-   - `jewelry-1.mp4`, `fashion-skincare.mp4`, `lifestyle-honey.mp4`, `lifestyle-colchon.mp4`
-
-   Recomendado: exportar en 720×1280 (9:16), H.264, ~2-4 MB por video para que cargue rápido.
-
-2. **Redes**: completar los links reales de Instagram y TikTok en el hero
+1. **Redes**: completar los links reales de Instagram y TikTok en el hero
    (buscar el comentario `TODO` en `index.html`).
 
 ## Deploy
